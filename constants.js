@@ -1,8 +1,9 @@
 exports.adalConfiguration = {
   authority: 'https://login.microsoftonline.com/common',
+  redirectUri: 'http://localhost:12000/callback',
+  //redirectUri: 'http://localhost:12000/callback',
   clientID: 'f19d3c30-0660-4f7f-96df-6dc78a686633',
-  clientSecret: '2xizpbwJKnXEv4HGzaZFF9r2hT/lz/P/dbqBF3nhPSA=',
-  redirectUri: 'http://localhost:12000/callback'
+  clientSecret: '2xizpbwJKnXEv4HGzaZFF9r2hT/lz/P/dbqBF3nhPSA='
 };
 
 exports.subscriptionConfiguration = {
