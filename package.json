@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "mocha ./tests/confTest.js && node ./bin/www",
+    "start": "node ./bin/www",
     "debug": "mocha ./tests/confTest.js && node --debug-brk ./bin/www",
     "lint": "eslint ."
   },
@@ -15,6 +15,7 @@
     "morgan": "^1.6.1",
     "openurl": "^1.1.1",
     "pug": "^2.0.0-alpha3",
+    "request": "^2.79.0",
     "serve-favicon": "^2.3.0",
     "socket.io": "^1.4.5",
     "sqlite3": "^3.1.1"

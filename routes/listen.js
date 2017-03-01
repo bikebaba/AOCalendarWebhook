@@ -58,7 +58,7 @@ router.post('/', function (req, res, next) {
     if (clientStatesValid) {
 
       var requestForToken = require("request");
-      refresh_token_data = "AQABAAAAAADRNYRQ3dhRSrm-4K-adpCJSBTzkr1lIJUiRN-48OYJYymH5rvbSb-dgcjhn9hAAx95e8zhiVI1JPPZYfP8jgeB3z6dMXs1Pk5QQs8jht8vReTU1VTYzgyLhscLNZYJbbQdPDuzGbB28GkbwQ0gs0KFRYXirWCmuKke-IhAxSiEnAAI_CCpWPbQlVyva_Gfe1dsbqDNwASv5F3nvI3IXgdx7nrgWdTlifOW9QS76zjNVueLzJ1J5B-n2Ve1rcvDw036SUNwVgztXjTv8Q2x8mRLgtmcRnd5rKt3LFJ-DekRHz3jF1TqIfF0nR7cOiFImsCOwYrU4uiZLjcbAjKhcOwl018VArISfAPcxRvcW1p03sUcScWxG7MchsOYPmNjUVuk793uLNO7MdOg4LUeNqtpWK6DPoAnDCA-w79vWK9C3fIZz82_50DZJ8LlGtnxXoz4n_1bjOph096LtXFl3gx70d9To4IRs2WfPcmoGf_qlOPDANU_0RqOIxPkl4ofNnu6DGFP6yiuzqt_mZTDtdJfycFxyuGBM4UtXKEMIybeJp08RVoSWDOGrPIwUa_6O3WArVZdhP1X6c8UixHInaOIsutdE8LL801ThSO1K9vXn7dGm0mMXeB2BarVgapM5qja5EIlR6i_TpmwFYXyUG3fRafZmeAlf9XUD-e_1EKbfXP-cCkOVYCGpb7nUdZRq2rSU8Rwgoivw3TI8Dw5U3EZIAA";
+      refresh_token_data = "AQABAAAAAADRNYRQ3dhRSrm-4K-adpCJMn_RHFKbvTgl-2zWptcHBr0zxalXJsLT_UXLEmC9jth0HH7FZoCuC2OtJ9RO_8VR1GekUeDDLQbVAN1Gqv5U4pSgPk5gxvWPYphPpzcNytT2Jdk3gJoCfGJmCFbv0GHKznZ-eH8hHlfPjrMg84RnotJhmSOGvetZjcBo1v2WuirFDR-fmloN9Rdm8ip692qz3XjsjWHZ_6kLFpCYSixgnlPLKjoYbALRRS2xVT1md9D-328h7egVviRsns_FWOuvK3xpBTHWsQC8kBKf6Sr1UXnLMSpKVyR3qktfit3rnrh5HxOsr9u3mwTrGTObCFOzYfua0gZJfCEFq8frWeUw2nHXAz2zvP4v_fh0MDm3plOktRnfrxPpdt9NOaNEwBeUZPYlr1ExbPIjvKTMAIrFnElgU1RMqDMW4ehh_tI3JHSmPGObPmQ5i9PsuVjPgFAER2bgjLZYZweLLmt4yLLiPjSbSulkEp7XxoXbF3G99JoIPUoOEDmNuc5aDcamMrLn6SOYZsoFxygXNtL-nCmkKHlZURbAGnOk2JoNzu8g6IA8YZ76z12DpqMtoyskZ3OkBeDqePIOnCg3WILkprnq89j-xQEhAXlUanugKS0l35uQ5pHgAYVM8wandL91jf9E_PWsCyzydOq1KYvcE8zpYKyGR5QKM6nLAipr2km0riQgAA";
       var options = {
         method: 'POST',
         url: 'https://login.microsoftonline.com/7e7701a8-2613-4c2f-980c-5dd3076b7a6f/oauth2/token',
@@ -79,9 +79,9 @@ router.post('/', function (req, res, next) {
         }
         else {
           console.log("tokenBody");
-          console.log(tokenBody);
+          //console.log(tokenBody);
           console.log("tokenBody.access_token");
-          console.log(JSON.parse(tokenBody).access_token);
+          //console.log(JSON.parse(tokenBody).access_token);
 
 
           for (i = 0; i < req.body.value.length; i++) {
@@ -109,7 +109,7 @@ router.post('/', function (req, res, next) {
             var request = http1.request(options, function (response) {
               var chunks = [];
 
-              console.log("6");
+              console.log("i = " + i);
               response.on("data", function (chunk) {
                 chunks.push(chunk);
               });
@@ -117,7 +117,13 @@ router.post('/', function (req, res, next) {
               response.on("end", function () {
                 var body1 = Buffer.concat(chunks);
                 console.log("***********************This is where the code should go ***********************");
-                console.log(body1);
+                //console.log(JSON.parse(body1.toString()));
+
+                /*
+
+                // All the CMECF CALLS go here.
+
+
                 var time = moment.duration("04:00:00");
                 var http2 = require("http");
                 var options2 = {
@@ -191,7 +197,7 @@ router.post('/', function (req, res, next) {
                 req2.write(jsonString);
                 req2.end();
 
-
+              */
               });
             });
 

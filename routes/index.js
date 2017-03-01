@@ -59,8 +59,8 @@ router.get('/callback', function (req, res, next) {
       subscriptionExpirationDateTime = new Date(Date.now() + 86400000).toISOString();
       subscriptionConfiguration.expirationDateTime = subscriptionExpirationDateTime;
       // Make the request to subscription service.
-      console.log("***********token.accessToken***********");
-      console.log(token.accessToken);
+      console.log("***********token***********");
+      console.log(token);
       requestHelper.postData(
         '/v1.0/subscriptions',
         //'/beta/subscriptions',
