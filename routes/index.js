@@ -24,6 +24,7 @@ router.get('/signin', function (req, res) {
 });
 
 router.get('/hello', function(req, res) {
+  console.log("UUUUUUUUUUU   params   UUUUUUUUUUUUUUUUU");
   console.log(req.params);
   console.log("UUUUUUUUUUUUUUUUUUUUUUUUUUUU");
   res.send("Hello World");
