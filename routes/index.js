@@ -10,7 +10,7 @@ var requestHelper = require('../helpers/requestHelper.js');
 var subscriptionConfiguration = require('../constants').subscriptionConfiguration;
 
 /* Redirect to start page */
-router.get('/', function (req, res) {
+router.get('/index', function (req, res) {
   res.redirect('/index.html');
   //console.log("authHelper.getAuthUrl()");
   //console.log(authHelper.getAuthUrl());
