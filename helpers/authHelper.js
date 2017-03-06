@@ -26,6 +26,8 @@ function getAuthUrl() {
  */
 function getTokenFromCode(code, callback) {
   var authContext = new AuthenticationContext(adalConfiguration.authority);
+
+  console.log("In getTokenFromCode...");
   authContext.acquireTokenWithAuthorizationCode(
     code,
     adalConfiguration.redirectUri,
