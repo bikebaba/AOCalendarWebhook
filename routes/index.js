@@ -11,6 +11,7 @@ var subscriptionConfiguration = require('../constants').subscriptionConfiguratio
 
 /* Redirect to start page */
 router.get('/index', function (req, res) {
+  console.log("In index");
   res.redirect('/index.html');
   //console.log("authHelper.getAuthUrl()");
   //console.log(authHelper.getAuthUrl());
@@ -19,6 +20,7 @@ router.get('/index', function (req, res) {
 
 /* Start authentication flow */
 router.get('/signin', function (req, res) {
+  console.log("In sign in");
   console.log(authHelper.getAuthUrl());
   res.redirect(authHelper.getAuthUrl());
 });
