@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3e2ee91-cfec-40b3-8fc8-9534d8b30540" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
     </list>
     <ignored path="o365webhook.iws" />
@@ -35,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="23" column="52" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="52" />
+            <state relative-caret-position="477">
+              <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -105,16 +106,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+            <state relative-caret-position="411">
+              <caret line="46" column="85" selection-start-line="46" selection-start-column="85" selection-end-line="46" selection-end-column="85" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#961#1247#0" expanded="false" />
                 <element signature="e#1310#2284#0" expanded="false" />
-                <element signature="e#4751#5502#0" expanded="false" />
+                <element signature="e#4795#5546#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -129,7 +130,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/helpers/requestHelper.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/routes/listen.js" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -138,6 +138,7 @@
         <option value="$PROJECT_DIR$/helpers/authHelper.js" />
         <option value="$PROJECT_DIR$/constants.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -364,12 +365,12 @@
       <workItem from="1478024146757" duration="10138000" />
       <workItem from="1487697037445" duration="6051000" />
       <workItem from="1487735963793" duration="3760000" />
-      <workItem from="1488465205887" duration="20139000" />
+      <workItem from="1488465205887" duration="20498000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125067000" />
+    <option name="totallyTimeSpent" value="125426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -442,7 +443,7 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#961#1247#0" expanded="false" />
             <element signature="e#1310#2284#0" expanded="false" />
-            <element signature="e#4751#5502#0" expanded="false" />
+            <element signature="e#4795#5546#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -508,7 +509,7 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#961#1247#0" expanded="false" />
             <element signature="e#1310#2284#0" expanded="false" />
-            <element signature="e#4751#5502#0" expanded="false" />
+            <element signature="e#4795#5546#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -574,7 +575,7 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#961#1247#0" expanded="false" />
             <element signature="e#1310#2284#0" expanded="false" />
-            <element signature="e#4751#5502#0" expanded="false" />
+            <element signature="e#4795#5546#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -640,7 +641,7 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#961#1247#0" expanded="false" />
             <element signature="e#1310#2284#0" expanded="false" />
-            <element signature="e#4751#5502#0" expanded="false" />
+            <element signature="e#4795#5546#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -690,7 +691,7 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#961#1247#0" expanded="false" />
             <element signature="e#1310#2284#0" expanded="false" />
-            <element signature="e#4751#5502#0" expanded="false" />
+            <element signature="e#4795#5546#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -811,24 +812,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" column="52" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="48" column="3" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+        <state relative-caret-position="411">
+          <caret line="46" column="85" selection-start-line="46" selection-start-column="85" selection-end-line="46" selection-end-column="85" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#961#1247#0" expanded="false" />
             <element signature="e#1310#2284#0" expanded="false" />
-            <element signature="e#4751#5502#0" expanded="false" />
+            <element signature="e#4795#5546#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
