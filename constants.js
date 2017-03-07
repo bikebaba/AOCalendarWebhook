@@ -3,7 +3,7 @@ var serverUri = "https://ecf-test.cm3b.aocms.uscourts.gov/n/beam/servlet/Transpo
 exports.adalConfiguration = {
   authority: 'https://login.microsoftonline.com/common',
   //redirectUri: 'http://localhost:12000/callback',
-  redirectUri: serverUri +  'servlet=callback',
+  redirectUri: serverUri +  'servlet=hello',
   clientID: 'f19d3c30-0660-4f7f-96df-6dc78a686633',
   clientSecret: '2xizpbwJKnXEv4HGzaZFF9r2hT/lz/P/dbqBF3nhPSA='
 };
