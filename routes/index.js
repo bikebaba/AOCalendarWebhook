@@ -50,7 +50,7 @@ function getCallback(req, res, next) {
   var subscriptionExpirationDateTime;
 
   console.log("****************************req.query**************************");
-  //console.log(req.query);
+  console.log(req.query);
 
   authHelper.getTokenFromCode(req.query.code, function (authenticationError, token) {
     if (token) {
