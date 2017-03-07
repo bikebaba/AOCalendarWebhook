@@ -44,8 +44,8 @@ router.post('/createEventwithoutToken', function(req, res) {
   //res.send("GetInfo");
 });
 
-router.get('/n/beam/servlet/TransportRoom/servlet/callback', function (req, res, next) {
-  console.log("in /n/beam.......callback");
+router.get('/callback/servlet/callback', function (req, res, next) {
+  console.log("in beam.......callback");
   res.redirect('/callback');
 });
 
