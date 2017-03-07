@@ -37,9 +37,9 @@ app.use('/listen', listen);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  var err = new Error('Not Found');
   console.log("req");
   console.log(req);
+  var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
