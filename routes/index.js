@@ -44,7 +44,9 @@ router.post('/createEventwithoutToken', function(req, res) {
   //res.send("GetInfo");
 });
 
-
+router.get('/n/beam/servlet/TransportRoom/servlet/callback', function (req, res, next) {
+  res.redirect('/callback');
+}
 
 // This route gets called at the end of the authentication flow.
 // It requests the subscription from Office 365, stores the subscription in a database,
