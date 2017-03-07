@@ -11,7 +11,7 @@ exports.adalConfiguration = {
 exports.subscriptionConfiguration = {
   changeType: 'Created',
   //notificationUrl: 'https://c7a758f1.ngrok.io/listen',
-  notificationUrl: serverUri +  'servlet=listen',
+  notificationUrl: 'https://ecf-test.cm3b.aocms.uscourts.gov/n/beam/servlet/TransportRoom/servlet/listen',
   //resource: 'me/events',
   resource: 'me/calendars/AQMkAGIzYTViZjgzLWYzN2QtNDUwMi1hMTM2LTNhNjk0MzJlNGQ3MwBGAAADolT90U35WEqIgZEtrX96eQcAbDi5PtVI3UuU5SGDPugV1QAAAgEGAAAAbDi5PtVI3UuU5SGDPugV1QAAAaJmFgAAAA==/events',
   clientState: 'cLIENTsTATEfORvALIDATION'

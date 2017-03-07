@@ -76,6 +76,8 @@ function getCallback(req, res, next) {
             // The name of the property coming from the service might change from
             // subscriptionId to id in the near future.
             subscriptionId = subscriptionData.id;
+            console.log("Before Redirect to Dashboard");
+            console.log(subscriptionData);
             res.redirect(
               '/dashboard.html?subscriptionId=' + subscriptionId +
               '&userId=' + subscriptionData.userId
