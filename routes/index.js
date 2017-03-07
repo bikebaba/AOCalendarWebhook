@@ -69,6 +69,7 @@ function getCallback(req, res, next) {
         token.accessToken,
         JSON.stringify(subscriptionConfiguration),
         function (requestError, subscriptionData) {
+          console.log("AAAAAAAÁ        DDDDDDDDD")
           if (subscriptionData) {
             subscriptionData.userId = token.userId;
             subscriptionData.accessToken = token.accessToken;
