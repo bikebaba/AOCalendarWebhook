@@ -44,15 +44,8 @@ router.post('/createEventwithoutToken', function(req, res) {
   //res.send("GetInfo");
 });
 
-router.get('/callback/servlet/callback', function (req, res, next) {
-  console.log("in beam.......callback");
-  res.redirect('/callback');
-});
 
-// This route gets called at the end of the authentication flow.
-// It requests the subscription from Office 365, stores the subscription in a database,
-// and redirects the browser to the dashboard.html page.
-router.get('/callback', function (req, res, next) {
+function getCallback(req, res, next) {
   var subscriptionId;
   var subscriptionExpirationDateTime;
 
@@ -98,7 +91,14 @@ router.get('/callback', function (req, res, next) {
       next(authenticationError);
     }
   });
-});
+}
+
+// This route gets called at the end of the authentication flow.
+// It requests the subscription from Office 365, stores the subscription in a database,
+// and redirects the browser to the dashboard.html page.
+router.get('/callback', getCallback);
+
+router.get('/callback/servlet/callback', getCallback);
 
 // This route signs out the users by performing these tasks
 // Delete the subscription data from the database
