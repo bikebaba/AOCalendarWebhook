@@ -17,7 +17,10 @@ var moment = require('moment');
 moment().format();
 
 /* Default listen route */
-router.post('/', function (req, res, next) {
+router.post('/', listen);
+router.post('/servlet/listen', listen);
+
+function listen(req, res, next) {
   var status;
   var clientStatesValid;
   var i;
@@ -121,83 +124,83 @@ router.post('/', function (req, res, next) {
 
                 /*
 
-                // All the CMECF CALLS go here.
+                 // All the CMECF CALLS go here.
 
 
-                var time = moment.duration("04:00:00");
-                var http2 = require("http");
-                var options2 = {
-                  "method": "POST",
-                  "hostname": "localhost",
-                  "port": "9090",
-                  "path": "/cmecfservices/rest/schedulecomposite/calendarevent?Authentication__UserToken=1706638-1593851312872125088-1610556436283164691.1900643103058461034&Authentication__UserIPAddressText=156.132.32.168",
-                  "headers": {
-                    "content-type": "application/json",
-                    "accept": "application/json",
-                    "authorization": 'Basic ' + new Buffer('Sysadmin Rieman:Test2013!').toString('base64')
-                  }
-                };
-                var req2 = http2.request(options2, function (res2) {
-                  var chunks = [];
+                 var time = moment.duration("04:00:00");
+                 var http2 = require("http");
+                 var options2 = {
+                 "method": "POST",
+                 "hostname": "localhost",
+                 "port": "9090",
+                 "path": "/cmecfservices/rest/schedulecomposite/calendarevent?Authentication__UserToken=1706638-1593851312872125088-1610556436283164691.1900643103058461034&Authentication__UserIPAddressText=156.132.32.168",
+                 "headers": {
+                 "content-type": "application/json",
+                 "accept": "application/json",
+                 "authorization": 'Basic ' + new Buffer('Sysadmin Rieman:Test2013!').toString('base64')
+                 }
+                 };
+                 var req2 = http2.request(options2, function (res2) {
+                 var chunks = [];
 
-                  res2.on("data", function (chunk) {
-                    chunks.push(chunk);
-                  });
+                 res2.on("data", function (chunk) {
+                 chunks.push(chunk);
+                 });
 
-                  res2.on("end", function () {
-                    var body = Buffer.concat(chunks);
-                    //console.log(body.toString());
-                  });
-                });
+                 res2.on("end", function () {
+                 var body = Buffer.concat(chunks);
+                 //console.log(body.toString());
+                 });
+                 });
 
 
-                jsonString = JSON.stringify({
-                  CalendarData: {
-                    calendarEvents: {
-                      endDate: moment(JSON.parse(body1.toString()).end.dateTime).subtract(time).format('YYYY-MM-DDTHH:mm:ss.SSSSSSS').toString(),
-                      eventAccessGroupList: [{accessGroupID: '68578', accessType: '118'},
-                        {accessGroupID: '68578', accessType: '97'},
-                        {accessGroupID: '68578', accessType: '101'}],
-                      eventDefinitionDTO: {
-                        CalendarDefinitionID: '16154',
-                        OwnerPersonReferenceRepresentation: null,
-                        CalendarDefinitionCode: 'q',
-                        SelectCategoryDescriptionText: 'Appointment',
-                        PrimaryLabel: 'Private',
-                        SecondaryLabel: 'Appointment',
-                        FillColor: 'FFFFFF',
-                        CalendarDocketingReferenceReferenceRepresentation: null,
-                        DisplayMode: '1',
-                        RecordModificationTracking: {
-                          RecordCreatedDate: {DateTime: '2016-09-22T10:12:44-04:00'},
-                          RecordCreatorRepresentation: {
-                            ReferenceID: '3',
-                            ReferenceLink: '/cmecfservices/rest/person/3'
-                          }
-                        }
-                      },
-                      eventReportable: 'false',
-                      eventResourceDtoList: {
-                        categoryId: '0',
-                        resourceId: '1706638',
-                        timeblockslotResourceType: 'Person'
-                      },
-                      eventSubjectText: JSON.parse(body1.toString()).subject,
-                      eventType: 'Personal',
-                      override: 'false',
-                      partialRecord: 'false',
-                      personID: '1706638',
-                      privateFlag: 'true',
-                      repeatCriteria: {timeBlockConstructID: ''},
-                      scheduleNewRepeatBehavior: 'false',
-                      startDate: moment(JSON.parse(body1.toString()).start.dateTime).subtract(time).format('YYYY-MM-DDTHH:mm:ss.SSSSSSS').toString()
-                    }
-                  }
-                });
-                req2.write(jsonString);
-                req2.end();
+                 jsonString = JSON.stringify({
+                 CalendarData: {
+                 calendarEvents: {
+                 endDate: moment(JSON.parse(body1.toString()).end.dateTime).subtract(time).format('YYYY-MM-DDTHH:mm:ss.SSSSSSS').toString(),
+                 eventAccessGroupList: [{accessGroupID: '68578', accessType: '118'},
+                 {accessGroupID: '68578', accessType: '97'},
+                 {accessGroupID: '68578', accessType: '101'}],
+                 eventDefinitionDTO: {
+                 CalendarDefinitionID: '16154',
+                 OwnerPersonReferenceRepresentation: null,
+                 CalendarDefinitionCode: 'q',
+                 SelectCategoryDescriptionText: 'Appointment',
+                 PrimaryLabel: 'Private',
+                 SecondaryLabel: 'Appointment',
+                 FillColor: 'FFFFFF',
+                 CalendarDocketingReferenceReferenceRepresentation: null,
+                 DisplayMode: '1',
+                 RecordModificationTracking: {
+                 RecordCreatedDate: {DateTime: '2016-09-22T10:12:44-04:00'},
+                 RecordCreatorRepresentation: {
+                 ReferenceID: '3',
+                 ReferenceLink: '/cmecfservices/rest/person/3'
+                 }
+                 }
+                 },
+                 eventReportable: 'false',
+                 eventResourceDtoList: {
+                 categoryId: '0',
+                 resourceId: '1706638',
+                 timeblockslotResourceType: 'Person'
+                 },
+                 eventSubjectText: JSON.parse(body1.toString()).subject,
+                 eventType: 'Personal',
+                 override: 'false',
+                 partialRecord: 'false',
+                 personID: '1706638',
+                 privateFlag: 'true',
+                 repeatCriteria: {timeBlockConstructID: ''},
+                 scheduleNewRepeatBehavior: 'false',
+                 startDate: moment(JSON.parse(body1.toString()).start.dateTime).subtract(time).format('YYYY-MM-DDTHH:mm:ss.SSSSSSS').toString()
+                 }
+                 }
+                 });
+                 req2.write(jsonString);
+                 req2.end();
 
-              */
+                 */
               });
             });
 
@@ -225,7 +228,7 @@ router.post('/', function (req, res, next) {
     }
   }
   res.status(status).end(http.STATUS_CODES[status]);
-});
+}
 
 // Get subscription data from the database
 // Retrieve the actual mail message data from Office 365.
