@@ -20,6 +20,19 @@ moment().format();
 router.post('/', listen);
 router.post('/servlet/listen', listen);
 
+router.get('/', function(req, res){
+  console.log("In listen /");
+  res.end();
+});
+
+
+
+router.get('/servlet/listen', function(req, res){
+  console.log("In listen 2/");
+  res.end();
+});
+
+
 function listen(req, res, next) {
   var status;
   var clientStatesValid;
